@@ -36,7 +36,7 @@ const EducationExperience: React.FC = () => {
     ]
 
     return (
-        <>
+        <div id ="experience" className='pt-28'>
             <div className='mx-auto flex w-[90%] items-center justify-center'>
                 <AnimatedTitle
                     text={"Education & Experience"}
@@ -47,7 +47,7 @@ const EducationExperience: React.FC = () => {
                     charSpace={"mr-[0.001em]"}
                 />
             </div>
-            <div className="relative flex flex-col justify-center bg-slate-50 overflow-hidden">
+            <div className="relative flex flex-col justify-center overflow-hidden">
                 <div className="w-full max-w-6xl mx-auto px-4 md:px-6">
                     <div className="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-16">
 
@@ -58,7 +58,7 @@ const EducationExperience: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

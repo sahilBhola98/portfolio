@@ -11,7 +11,7 @@ const About: React.FC = () => {
     return (
         <>
             <section
-                className="relative z-10 w-full h-full items-center justify-center overflow-hidden pt-16 pb-14 bg-neutral-50"
+                className="relative z-10 w-full h-full items-center justify-center overflow-hidden pt-28"
                 id="about"
             >
                 <div className="mx-auto flex w-[90%] flex-col lg:max-w-[1212.8px]">
@@ -46,6 +46,13 @@ const About: React.FC = () => {
                                 <Button
                                     borderRadius="1.75rem"
                                     className="bg-white text-black border-neutral-200"
+                                    onClick={() => {
+                                        window.open(
+                                            "https://drive.google.com/file/d/1or6Br5nAxnCwiLmlbGf9bWyFeH-RxMzG/view?usp=sharing",
+                                            "_blank"
+                                        );
+                                    }
+                                    }
                                 >
                                     Download Resume
                                 </Button>
