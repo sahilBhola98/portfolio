@@ -48,7 +48,7 @@ const About: React.FC = () => {
                                     className="bg-white text-black border-neutral-200"
                                     onClick={() => {
                                         window.open(
-                                            "https://drive.google.com/file/d/1or6Br5nAxnCwiLmlbGf9bWyFeH-RxMzG/view?usp=sharing",
+                                            "https://drive.google.com/file/d/1Li8Zf8FyGUpl1idUNugKBLt2GdJGGewT/view?usp=sharing",
                                             "_blank"
                                         );
                                     }
