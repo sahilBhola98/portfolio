@@ -5,6 +5,8 @@ import pawstime from '../../../public/pawstime.png';
 import realTimeMusicPlayer from '../../../public/realTimeMusicPlayer.jpg';
 import world_stock from '../../../public/world_stock.png';
 import AnimatedTitle from '../animations/AnimatedTitle';
+import netflix_dashboard from '../../../public/netflix_dashboard.png';
+import rising_indians from '../../../public/rising_indians.png';
 
 const Projects = () => {
     const projects = [
@@ -28,6 +30,20 @@ const Projects = () => {
             image: realTimeMusicPlayer,
             link: "https://github.com/shahnitav/Real-Time-Emotion-Recognition-Based-Music-Player",
             technologiesUsed: ["Python", "TensorFlow", "CNNs", "OpenCV"]
+        },
+        {
+            title: "Netflix Dashboard",
+            description: "This Tableau dashboard offers a comprehensive analysis of Netflix content and viewing trends. It provides an overview of the content library, highlights trending shows and movies, and breaks down genre distribution. The dashboard also includes release year analysis and viewer ratings, giving users valuable insights into Netflix's content evolution and audience reception.",
+            image: netflix_dashboard,
+            link: "https://github.com/AmishaMe24/netflix-dashboard-tableau",
+            technologiesUsed: ["Tableau", "Data Visualization", "Data Analysis"]
+        },
+        {
+            title: "Rising Indians App",
+            description: "Rising Indian is a non-profit organization located in Vadodara. This project aims at building an app which helps in volunteer registration for the organization. Features: Sign Up/Login, Upload Event, Like/Comment/Delete Event, Payment Gateway, Timeline, User Account.",
+            image: rising_indians,
+            link: "https://github.com/AmishaMe24/RisingIndiansApp",
+            technologiesUsed: ["Java", "Android Studio", "Firebase", "Razorpay"]
         }
     ];
 
@@ -89,6 +105,7 @@ const Projects = () => {
                                 </motion.p>
                                 <motion.a
                                     href={project.link}
+                                    target='_blank'
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.6, ease: "easeInOut" }}
