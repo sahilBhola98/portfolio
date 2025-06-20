@@ -7,8 +7,8 @@ import { useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Amisha Mehta",
-  description: "Amisha Mehta's personal website",
+  title: "Sahil Bhola",
+  description: "Sahil Bhola's personal website",
 };
 
 export default function RootLayout({
