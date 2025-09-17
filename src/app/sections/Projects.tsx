@@ -47,6 +47,15 @@ const Projects = () => {
         }
     ];
 
+    const patents = [
+        {
+            title: "Distributed and Lightweight Intrusion Detection System, U.S. Patent Office (VTIP 25-160, 222204-6460)",
+            description: "This invention introduces a decentralized, real-time NIDS leveraging error-amplifying autoencoders, adaptive trust scoring, and blockchain-based trust persistence to enable scalable Zero-Trust network security.",
+            link: "https://github.com/sahilBhola98",
+            technologiesUsed: ["Autoencoders", "python", "blockchain", "Web3.js"]
+        },
+    ];
+
     const badgeColor = ["bg-red-100 text-red-800", "bg-indigo-100 text-indigo-800", "bg-purple-100 text-purple-800", "bg-pink-100 text-pink-800", "bg-yellow-100 text-yellow-800"];
 
     return (
@@ -125,6 +134,87 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
+            <div id="patents" className="pt-28">
+                <div className='mx-auto flex w-[90%] items-center justify-center'>
+                    <AnimatedTitle
+                        text={"Patents"}
+                        className="text-left text-[40px] font-bold leading-[0.9em] tracking-tighter text-slate-950 sm:text-[45px] md:text-[60px] lg:text-[80px]"
+                        wordSpace="mr-[14px]"
+                        charSpace="mr-[0.001em]"
+                    />
+                </div>
+                <div className='flex justify-center'>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-16 lg:gap-20 p-10">
+                        {patents.map((patent, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 + index * 0.2, duration: 0.8, ease: "easeInOut" }}
+                                className="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-6"
+                            >
+                                <a href={patent.link} target="_blank">
+                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 hover:underline">{patent.title}</h5>
+                                </a>
+                                <p className="mb-3 font-normal text-gray-700 text-justify">{patent.description}</p>
+                                <a href={patent.link} target='_blank' className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#7685d6] rounded-lg hover:bg-[#6E7DCE] focus:ring-4 focus:outline-none focus:ring-blue-300">
+                                    View Project
+                                </a>
+                                <div className="mt-4 flex flex-wrap gap-2">
+                                    {patent.technologiesUsed.map((tech, techIndex) => (
+                                        <span key={techIndex} className={`text-xs font-medium px-2.5 py-0.5 rounded ${badgeColor[techIndex % badgeColor.length]}`}>
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            <div id="symposia" className="pt-28">
+    <div className='mx-auto flex w-[90%] items-center justify-center'>
+        <AnimatedTitle
+            text={"Symposia & Exhibitions"}
+            className="text-left text-[40px] font-bold leading-[0.9em] tracking-tighter text-slate-950 sm:text-[45px] md:text-[60px] lg:text-[80px]"
+            wordSpace="mr-[14px]"
+            charSpace="mr-[0.001em]"
+        />
+    </div>
+    <div className='flex justify-center'>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-16 lg:gap-20 p-10">
+            {[
+                {
+                    title: "CCI Symposium 2024",
+                    description: "Commonwealth Cyber Initiative, Richmond, VA — Attendee & Poster Sessions",
+                },
+                {
+                    title: "CyberSmart Summit 2025",
+                    description: "Georgetown University, Washington DC — Attendee & Poster Sessions",
+                },
+                {
+                    title: "GSMA RIG 2025",
+                    description: "Alexandria, Virginia — 5G & Edge Showcase (Delegate)",
+                },
+                {
+                    title: "Google Dev Fest 2020",
+                    description: "India — Delegate",
+                },
+            ].map((event, index) => (
+                <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 + index * 0.2, duration: 0.8, ease: "easeInOut" }}
+                    className="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-6"
+                >
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{event.title}</h5>
+                    <p className="mb-3 font-normal text-gray-700 text-justify">{event.description}</p>
+                </motion.div>
+            ))}
+        </div>
+    </div>
+</div>
         </>
     );
 };
